@@ -2,7 +2,7 @@
   connection: httpapi
   collections:
     - fortinet.fortios
-    
+
   vars:
     vdom: "root"
     host: "192.168.122.60"
@@ -10,6 +10,18 @@
     password: ""
   tasks:
 
+  #########################################
+  # Creating a temp directory on the host #
+  #########################################
+  - name: Create a temp directory if it does not exist
+    ansible.builtin.file:
+      path: ~/temp/backup_vlan/
+      state: directory
+      mode: '0777'
+
+  #########################################
+  # backup global settings fortigate vdom #
+  #########################################
   - name: backup global or a_specific_vdom settings
     fortios_system_config_backup_restore:
      config: "system config backup"
@@ -21,4 +33,4 @@
      https: True
      ssl_verify: False
      scope: "global or vdom"
-     filename: "/tmp/backup_test"
+     filename: "~/temp/backup_vlan"
