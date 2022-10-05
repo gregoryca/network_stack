@@ -23,4 +23,4 @@ Also make sure that your forked repo has the right inventory secrets defined.
 If not, the intergrate.yml pipeline can't run on the target server(s)
 ![inventory](https://user-images.githubusercontent.com/10562868/187670468-34125a16-e593-4c2c-92d8-3507b310e033.PNG)
 
-The intergrate.yml can be found under: ./FORKED REPO/.github/workflows
+The deployment.yml can be found under: ./FORKED REPO/.github/workflows
