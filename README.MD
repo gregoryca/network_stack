@@ -29,7 +29,7 @@ The deployment.yml can be found under: ./FORKED REPO/.github/workflows
 
 To run the ansible scripts locally, make sure you're in the right folder to run the script.
 
-For example when you need to probe a Switch, make sure you're in the "network_probe folder".
+For example when you need to probe a Switch, make sure you're in the "network_probe" folder.
 Use the following command to run the ansible playbook: ansible-playbook probe_vlan.yml
 
 To run the script from Github Actions, make sure the Ansible script can be communicate with the network else it will fail.
