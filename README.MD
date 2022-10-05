@@ -24,3 +24,12 @@ If not, the intergrate.yml pipeline can't run on the target server(s)
 ![inventory](https://user-images.githubusercontent.com/10562868/187670468-34125a16-e593-4c2c-92d8-3507b310e033.PNG)
 
 The deployment.yml can be found under: ./FORKED REPO/.github/workflows
+
+## Usage
+
+To run the ansible scripts locally, make sure you're in the right folder to run the script.
+
+For example when you need to probe a Switch, make sure you're in the "network_probe folder".
+Use the following command to run the ansible playbook: ansible-playbook probe_vlan.yml
+
+To run the script from Github Actions, make sure the Ansible script can be communicate with the network else it will fail.
